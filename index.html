@@ -24,12 +24,12 @@
     :root{
       --gold:#c9a84c; --gold2:#f0d080;
       --flame:#ff6a00; --flame2:#ee0979;
-      --deep:#0d0612; --smoke:#1a0a22;
+      --deep:#000000; --smoke:#0a0010;
       --purple:#6b21a8;
       --txt:#f0e8d0; --mut:#8a7a60;
       --bdr:rgba(201,168,76,0.22);
     }
-    html,body{height:100%;width:100%;background:var(--deep);font-family:'Raleway',sans-serif;color:var(--txt);overflow:hidden;}
+    html,body{height:100%;width:100%;background:#000;font-family:'Raleway',sans-serif;color:var(--txt);overflow:hidden;}
 
     /* BG */
     .bg{position:fixed;inset:0;z-index:0;pointer-events:none;
@@ -111,7 +111,7 @@
       background:conic-gradient(var(--gold) 0deg,var(--gold2) 60deg,var(--flame) 120deg,var(--flame2) 180deg,var(--gold2) 240deg,var(--gold) 300deg,var(--gold) 360deg);
       animation:spinRing 8s linear infinite;z-index:0;
     }
-    .logo-mask{position:absolute;inset:3px;border-radius:50%;background:var(--deep);z-index:1;}
+    .logo-mask{position:absolute;inset:3px;border-radius:50%;background:#000;z-index:1;}
     .logo-img{
       position:absolute;inset:5px;border-radius:50%;
       overflow:hidden;z-index:2;
@@ -198,13 +198,13 @@
       font-size:9.5px;color:rgba(192,168,220,.7);
       text-align:center;line-height:1.5;font-weight:500;
       animation:fadeUp .5s .44s ease both;
-      max-width:310px;margin-bottom:11px;
+      max-width:310px;margin-bottom:14px;
     }
 
     /* Buttons */
     .cta-wrap{
       display:flex;flex-direction:column;
-      align-items:center;gap:10px;
+      align-items:center;gap:0;
       width:100%;max-width:340px;
       animation:fadeUp .5s .50s ease both;
     }
@@ -232,18 +232,6 @@
     @keyframes btnP{0%,100%{transform:scale(1);box-shadow:0 4px 24px rgba(201,168,76,.42)}50%{transform:scale(1.03);box-shadow:0 8px 36px rgba(201,168,76,.66)}}
     @keyframes gShift{0%{background-position:0% center}100%{background-position:200% center}}
 
-    .btn-s{
-      display:flex;align-items:center;justify-content:center;gap:7px;
-      width:100%;padding:12px 24px;border-radius:6px;
-      background:transparent;border:1px solid rgba(201,168,76,.3);
-      color:var(--gold);font-family:'Raleway',sans-serif;
-      font-weight:600;font-size:12px;letter-spacing:.08em;
-      text-decoration:none;cursor:pointer;
-      transition:border-color .2s,background .2s;
-      animation:btnS 2.8s ease-in-out infinite;
-    }
-    .btn-s:hover{border-color:var(--gold2);background:rgba(201,168,76,.08);}
-    @keyframes btnS{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
     .tg{width:17px;height:17px;flex-shrink:0;}
 
     /* Credit */
@@ -279,9 +267,8 @@
       .stat-v{font-size:18px;}
       .stat-l{font-size:8px;}
       .disc{font-size:8.5px;padding:5px 11px;margin-bottom:9px;max-width:100%;}
-      .cta-wrap{gap:9px;max-width:100%;padding:0 1px;}
+      .cta-wrap{gap:0;max-width:100%;padding:0 1px;}
       .btn-p{font-size:11.5px;padding:13px 18px;letter-spacing:.1em;}
-      .btn-s{font-size:11px;padding:11px 18px;}
       .hline{width:110px;}
       .credit{font-size:10px;bottom:7px;}
     }
@@ -290,7 +277,6 @@
       h1{font-size:16px;}
       .feat i{font-size:13px;}
       .btn-p{font-size:11px;padding:12px 14px;}
-      .btn-s{font-size:10.5px;padding:10px 14px;}
       .stat-v{font-size:16px;}
       .ornament{margin:6px 0;}
       .cta-wrap{gap:8px;}
@@ -307,8 +293,7 @@
       .stat-v{font-size:28px;}
       .feat-grid{max-width:420px;gap:10px;margin:15px 0;}
       .btn-p{font-size:14.5px;padding:16px 32px;}
-      .btn-s{font-size:13.5px;padding:14px 32px;}
-      .cta-wrap{max-width:420px;gap:12px;}
+      .cta-wrap{max-width:420px;gap:0;}
       .stats{gap:26px;margin-bottom:15px;}
       .ornament{margin:13px 0;}
       .disc{margin-bottom:14px;font-size:11px;max-width:420px;}
@@ -384,12 +369,9 @@
     <div class="cta-wrap">
       <a href="https://t.me/+XufUqZ0IFZxiODhl" target="_blank" rel="noopener" class="btn-p">
         <svg class="tg" viewBox="0 0 24 24" fill="none">
-          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.069l-2.04 9.608c-.15.673-.546.837-1.107.52l-3.062-2.255-1.478 1.423c-.164.164-.3.3-.615.3l.219-3.108 5.655-5.108c.246-.218-.053-.34-.38-.12L7.27 14.078l-3.013-.94c-.655-.204-.668-.655.137-.969l11.753-4.53c.546-.2 1.024.133.847.93l-.432-.5z" fill="#0d0612"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.069l-2.04 9.608c-.15.673-.546.837-1.107.52l-3.062-2.255-1.478 1.423c-.164.164-.3.3-.615.3l.219-3.108 5.655-5.108c.246-.218-.053-.34-.38-.12L7.27 14.078l-3.013-.94c-.655-.204-.668-.655.137-.969l11.753-4.53c.546-.2 1.024.133.847.93l-.432-.5z" fill="#000"/>
         </svg>
         Join The Oracle — Free
-      </a>
-      <a href="https://t.me/+XufUqZ0IFZxiODhl" target="_blank" rel="noopener" class="btn-s">
-        🔮 &nbsp; Reveal Today's Prediction
       </a>
     </div>
 
